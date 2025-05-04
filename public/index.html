@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <title>Hango</title>
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".mobile-nav");
+    const head = document.querySelector(".header");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("show");
+      header.classList.toggle("show");
+    });
+  });
+</script>
+<body>
+<section class="ppal">
+  <header class="header">
+    <div><strong>Hango</strong></div>
+    <button class="menu-toggle" aria-label="Abrir menú">
+      ☰
+    </button>
+    <nav class="mobile-nav">
+      <a href="#porQue">¿Por qué Hango?</a>
+      <a href="#comoFunciona">¿Cómo funciona?</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#login">Ingresá</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <div>
+        <h1>El plan no se arma solo... <br> bueno, ahora sí.</h1>
+        <p>Menos charla, más juntada.</p>
+      </div>
+      <div>
+        <button class="cta-button">USÁ HANGO</button>
+      </div>
+      
+    </div>
+    <div class="hero-image">
+      <img src="resources/amigos.jpg" alt="Grupo de amigos reunidos" />
+    </div>
+  </section>
+</section>
+
+
+<section class="steps" id="comoFunciona">
+  <h2>Convertite en Hanguero</h2>
+  <div class="step-items">
+    <div class="step">
+      <img src="resources/user.png" alt="Registro"/>
+      <div class="text-step">
+        <p>Registrate ingresando tus momentos disponibles y preferencias</p>
+      </div>
+    </div>
+    <div class="step">
+      <img src="resources/grupo.png" alt="Grupo"/>
+      <div class="text-step">
+        <p>Creá un grupo e invitá a tus amigos</p>
+      </div>
+    </div>
+    <div class="step">
+      <img src="resources/plan.png" alt="Automático"/>
+      <div class="text-step">
+        <p>Dejá que Hango haga lo suyo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info"  id="porQue">
+  <div class="info-block">
+    <div>
+      <h1>¿Por qué Hango?</h1>
+      <p>Porque armar un plan con tus amigos no debería ser una misión imposible.
+      Hango existe para que juntarse sea tan fácil como tener ganas.
+      Menos excusas, más momentos juntos.</p>
+    </div>
+  </div>
+  <div class="pq-container">
+
+    <div class="pq-item">
+      <img src="resources/smartCalendar.png" alt="Desorganización" class="pq-icon">
+      <div class="pq-text">
+        <h3>Calendario Inteligente</h3>
+        <p>Encontrá matches de disponibilidad en tiempo real. ¡Nunca fue tan fácil coordinar!</p>
+      </div>
+    </div>
+
+    <div class="pq-item">
+      <img src="resources/chatbot.png" alt="Inteligencia social" class="pq-icon">
+      <div class="pq-text">
+        <h3>Chatbot Organizador</h3>
+        <p>El bot del grupo propone, organiza, notifica y hasta divide gastos. Un verdadero asistente social.</p>
+      </div>
+    </div>
+
+    <div class="pq-item">
+      <img src="resources/adaptativo.png" alt="Plan perfecto" class="pq-icon">
+      <div class="pq-text">
+        <h3>Planificación Adaptativa</h3>
+        <p>Hango aprende de las salidas anteriores para mejorar cada nueva experiencia y se adapta a contingencias.</p>
+      </div>
+    </div>
+
+    <div class="pq-item">
+      <img src="resources/bitacora.png" alt="Chat interminable" class="pq-icon">
+      <div class="pq-text">
+        <h3>Bitácora de Momentos</h3>
+        <p>Guardá recuerdos de cada salida: fotos, comentarios y calificaciones para revivir lo mejor de tu grupo.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2>Hango</h2>
+      <p>Tu plan ideal, sin chats eternos.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Enlaces</h3>
+      <ul>
+        <li><a href="#porQue">¿Por qué Hango?</a></li>
+        <li><a href="#comoFunciona">¿Cómo funciona?</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#login">Ingresá</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact" id="contacto">
+      <h3>Contacto</h3>
+      <p>hola@hango.app</p>
+      <div class="social-icons">
+        <a href="#"><img src="resources/instagram.png" alt="Instagram" /></a>
+        <!--<a href="#"><img src="resources/x.svg" alt="X (Twitter)" /></a>
+        <a href="#"><img src="resources/linkedin.svg" alt="LinkedIn" /></a>-->
+        <a href="#"><img src="resources/whatsapp.png" alt="Whatsapp" /></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Hango. Todos los derechos reservados.</p>
+  </div>
+</footer>
+</body>
+</html>
