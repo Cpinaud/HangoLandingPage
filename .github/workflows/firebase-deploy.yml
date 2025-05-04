@@ -27,6 +27,6 @@ jobs:
         npm run build  # Esto depende de si tu proyecto requiere compilación o no, usa el comando que necesitas
 
     - name: Firebase Deploy
-      uses: wzieba/Firebase-Deploy@v0.3.0
+      uses: wzieba/Firebase-Deploy@v0.6.0
       with:
         firebase_token: ${{ secrets.FIREBASE_AUTH_TOKEN }}  # Usa el token almacenado en tus secrets
