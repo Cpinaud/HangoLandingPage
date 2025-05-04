@@ -1,0 +1,32 @@
+name: Deploy to Firebase
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # Usa la versión de Node.js que usas en tu proyecto
+
+    - name: Install dependencies
+      run: |
+        npm install
+
+    - name: Build the project
+      run: |
+        npm run build  # Esto depende de si tu proyecto requiere compilación o no, usa el comando que necesitas
+
+    - name: Firebase Deploy
+      uses: wzieba/Firebase-Deploy@v0.3.0
+      with:
+        firebase_token: ${{ secrets.FIREBASE_AUTH_TOKEN }}  # Usa el token almacenado en tus secrets
