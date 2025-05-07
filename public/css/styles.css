@@ -442,6 +442,8 @@ button{
 
           #logo{
             height: auto;
+            display: flex;
+            justify-content: space-around;
           }
 
           #logo img{
@@ -454,6 +456,7 @@ button{
             background: none;
             border: none;
             cursor: pointer;
+            align-self: flex-end;
             
           }
         
@@ -474,6 +477,7 @@ button{
           .header.show {
             display: flex;
             flex-direction: column;
+            height: 100%;
             
           }
         
