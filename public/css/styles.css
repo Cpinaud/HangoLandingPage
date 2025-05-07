@@ -428,16 +428,24 @@ button{
         }
 
         .ppal{
-            height: auto;
+          height: 80vh;
         }
         header {
             flex-direction: row;
             align-items: center;
-            padding: 1rem;
+            padding: 1%;
             background: #f8fbfd;
             flex-wrap: wrap;
             height: clamp(60px, 15vh, 100px);
             
+          }
+
+          #logo{
+            height: auto;
+          }
+
+          #logo img{
+            width: 50%;
           }
 
           .menu-toggle {
@@ -519,7 +527,7 @@ button{
         .step {
           max-width: 90%;
         }
-      
+      /*
         .info {
           flex-direction: column;
           height: auto;
@@ -537,6 +545,25 @@ button{
       
         .pq-icon {
           margin: 0 0 1rem;
+        }*/
+
+        .why-hango{
+          height: auto;
+          justify-content: space-around;
+        }
+        .features{
+          flex-direction: column;
+          align-content: center;
+          justify-content: space-between;
+        }
+
+        .feature{
+          width: 80%;
+        }
+
+        .cta2{
+          width: 50%;
+          margin:5%;
         }
       
         .footer-container {
