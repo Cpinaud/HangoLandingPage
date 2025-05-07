@@ -11,18 +11,7 @@
 
   <title>Hango</title>
 </head>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".mobile-nav");
-    const head = document.querySelector(".header");
 
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("show");
-      head.classList.toggle("show");
-    });
-  });
-</script>
 <body>
   <header class="header">
     <div id="logo"><img src="resources/LogoLanding.png" alt="Logo de Hango" />
@@ -35,11 +24,24 @@
       <a href="#comoFunciona">¿Cómo funciona?</a>
       <a href="#porQue">¿Por qué Hango?</a>
       <a href="#contacto">Contacto</a>
-      <a href="#login">Ingresá</a>
     </nav>
   </header>
 <section class="ppal">
-  
+  <div id="popup" class="overlay">
+    
+    <div class="modal">
+      <button class="close-btn" onclick="closeModal()">x</button>
+      <form id="contact-form">
+        <h3>Dejanos tu correo para saber más</h3>
+        <input type="email"  name="email" placeholder="ejemplo@hango.com.ar" required>
+        <button id="mailButton" type="submit">Contame más</button>
+      </form>
+      
+
+      
+      
+    </div>
+  </div>
 
   <section class="hero">
     <div class="hero-text">
@@ -51,7 +53,7 @@
         <!--<p>Que no se quede en palabras.</p>-->
       </div>
       <div>
-        <button class="cta-button">👉🏻 ACTIVÁ LA JUNTADA 👈🏻</button>
+        <button class="cta-button" onclick="openModal()">👉🏻 ACTIVÁ LA JUNTADA 👈🏻</button>
       </div>
       
     </div>
@@ -118,7 +120,7 @@
           <h5>¡<strong>Hango</strong> ajusta sus próximos planes con cada calificación y comentario!</h5>
       </div>
   </div>
-  <div><button class="cta-button cta2"> ACTIVÁ LA JUNTADA </button></div>
+  <div><button class="cta-button cta2" onclick="openModal()"> ACTIVÁ LA JUNTADA </button></div>
   
 </section>
 
@@ -190,13 +192,12 @@
         <li><a href="#porQue">¿Por qué Hango?</a></li>
         <li><a href="#comoFunciona">¿Cómo funciona?</a></li>
         <li><a href="#logo">Volver</a></li>
-        <li><a href="#login">Ingresá</a></li>
       </ul>
     </div>
 
     <div class="footer-contact" id="contacto">
       <h3>Contacto</h3>
-      <p>hola@hango.app</p>
+      <a  id="mailto" href="mailto:hangoinformacion@gmail.com">hangoinformacion@gmail.com</a>
       <div class="social-icons">
         <a href="#"><img src="resources/instagram.png" alt="Instagram" /></a>
         <!--<a href="#"><img src="resources/x.svg" alt="X (Twitter)" /></a>
@@ -211,4 +212,49 @@
   </div>
 </footer>
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".mobile-nav");
+    const head = document.querySelector(".header");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("show");
+      head.classList.toggle("show");
+    });
+  });
+
+  function openModal() {
+    document.getElementById("popup").style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  emailjs.init({
+    publicKey: "b8fbHF-eJVqEwN936", 
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_opqh7xg', 'template_3ryp6vo', this)
+        .then(function () {
+          alert('🎉 ¡Gracias por tu interés! Te enviamos un correo con más info.');
+          document.getElementById('contact-form').reset();
+        }, function (error) {
+          console.error('😞 Error al enviar', error);
+          alert('Oops... algo salió mal. Probá más tarde.');
+        });
+    });
+  });
+</script>
+
+
 </html>
