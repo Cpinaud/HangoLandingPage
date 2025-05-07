@@ -125,8 +125,8 @@
   }
 
   .hero-text h1 {
-    width: 55%;
-    font-size:3rem;
+    width: 70%;
+    font-size:5rem;
     margin-bottom: 0.5rem;
     justify-self: center;
     color:#003F5C;
@@ -136,6 +136,7 @@
     font-style: italic;
     margin-bottom: 1.5rem;
     color:#003F5C;
+    font-size:1.5rem;
   }
 
   .cta-button {
@@ -146,8 +147,9 @@
     border:none;
     border-radius: 20px;
     cursor: pointer;
-    width: 40%;
-    font-weight: bold;
+    width: 50%;
+    height: 100%;
+    font-size: 1.5rem;
     align-self: center;
     letter-spacing: 1px;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -324,13 +326,15 @@
 
   .cta2{
     background-color: #FF7A00;
-    color: #003F5C;
-    text-shadow: 0px 1px 5px white;
+    color:#FFF3E1;
+    text-shadow: 0px 1px 5px #003F5C;
+    font-family: "Fredoka", sans-serif;
   }
 
   .cta2:hover{
     background-color: #FF7A00;
-    color:black;
+    color:#003F5C;
+    text-shadow: 0px 1px 5px #FFF3E1;
   }
   .why-hango {
     height: 100vh;
@@ -398,7 +402,7 @@ button{
     font-size: 1rem;
     color: #003F5C;
     font-weight: lighter;
-    text-shadow: 1px 0.5px 0.5px #003f5c7a;
+    
     
 }
 
@@ -550,6 +554,10 @@ button{
             width: 80%;
             padding: 10%;
         }
+
+        .hero-text p{
+          font-size: 1rem;
+        }
       
         .hero-text h1 {
           font-size: 2rem;
@@ -558,6 +566,7 @@ button{
       
         .cta-button {
           width: 80%;
+          font-size: 0.8rem;
         }
       
         .hero-image {
