@@ -434,7 +434,7 @@ button{
             flex-direction: row;
             align-items: center;
             padding: 1%;
-            background: #f8fbfd;
+            background: #FFF3E1;
             
             height: clamp(60px, 15vh, 2vh);
             
