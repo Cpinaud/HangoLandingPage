@@ -435,8 +435,8 @@ button{
             align-items: center;
             padding: 1%;
             background: #f8fbfd;
-            flex-wrap: wrap;
-            height: clamp(60px, 15vh, 100px);
+            
+            height: clamp(60px, 15vh, 2vh);
             
           }
 
@@ -445,7 +445,7 @@ button{
           }
 
           #logo img{
-            width: 50%;
+            width: 40%;
           }
 
           .menu-toggle {
@@ -506,7 +506,7 @@ button{
         }
       
         .hero-image img {
-          width: 100%;
+          width: 90%;
           align-self: center;
         }
 
