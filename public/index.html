@@ -6,15 +6,14 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
   <title>Hango</title>
 </head>
 
 <body>
   <header class="header">
-    <div id="logo"><img src="resources/LogoLanding.png" alt="Logo de Hango" />
+    <div id="logo"><img src="resources/isotipo.png" alt="Logo de Hango" />
       <button class="menu-toggle" aria-label="Abrir menú">
         ☰
       </button>
@@ -45,11 +44,12 @@
         <h1>El plan no se arma solo... <br> bueno, ahora sí.</h1>
         <!--<p>Menos charla, más juntada.</p>-->
         <!--<p>Porque las ganas están, solo falta Hango.</p>-->
-        <p>Porque las ganas están, solo falta Hango.</p>
+        <p>Porque las ganas están, solo falta <span>Hango</span>.</p>
         <!--<p>Que no se quede en palabras.</p>-->
       </div>
       <div>
-        <button class="cta-button" onclick="openModal()">👉🏻 ACTIVÁ LA JUNTADA 👈🏻</button>
+        <!--👉🏻👈🏻-->
+        <button class="cta-button" onclick="openModal()"> QUIERO HANGUEAR </button>
       </div>
       
     </div>
@@ -66,23 +66,25 @@
     <div class="step" >
       <img src="resources/user.png" alt="Registro"/>
       <div class="text-step">
-        <!--<p>Registrate ingresando tus momentos disponibles y preferencias</p>-->
-        <p>Contanos cuándo tenés tiempo libre y cómo te gusta aprovecharlo.</p>
+        <p>Indicá cuándo estás libre y qué te copa hacer.</p>
       </div>
     </div>
     <div class="step" >
       <img src="resources/grupo.png" alt="Grupo"/>
       <div class="text-step">
-        <!--<p>Creá un grupo e invitá a tus amigos</p>-->
-        <p>Creá tus grupos y sumá a tus amigos</p>
+        <p>Armá tu grupo e invitá a tus amigos a unirse.</p>
       </div>
     </div>
     <div class="step">
       <img src="resources/plan.png" alt="Automático"/>
       <div class="text-step">
-        <p><strong>Hango</strong> analiza gustos, horarios y presupuesto del grupo para generar los mejores planes en cada uno</p>
+        <p>Todos votan su favorito y el mejor plan gana.</p>
       </div>
     </div>
+  </div>
+  <div>
+    <h4>Sin vueltas y sin chats eternos.</h4>
+    <h3><strong>Hango</strong> cruza gustos, disponibilidad y presupuesto grupal para generar planes reales, que de verdad se hacen.</h3>
   </div>
 </section>
 
@@ -119,62 +121,6 @@
   <div><button class="cta-button cta2" onclick="openModal()"> ACTIVÁ LA JUNTADA </button></div>
   
 </section>
-
-<!--<section class="info"  id="porQue">
-  <div class="info-block">
-    <div>
-      <h1>¿Por qué Hango?</h1>
-      <p>Porque armar un plan con tus amigos no debería ser una misión imposible.
-      Hango existe para que juntarse sea tan fácil como tener ganas.
-      Menos excusas, más momentos juntos.</p>
-    </div>
-    <div style="margin-top: 60px">
-      <h1>¿Qué nos hace únicos?</h1>
-      <p>Hango no solo organiza planes, los anticipa y los hace realidad. Con solo indicar tus tiempos, gustos y
-         presupuesto, nuestro asistente inteligente propone el mejor plan para todos, sin estrés ni vueltas.
-          </p>
-    </div>
-    
-    
-  </div>
-  
-  <div class="pq-container">
-
-    <div class="pq-item">
-      <img src="resources/smartCalendar.png" alt="calendar" class="pq-icon">
-      <div class="pq-text">
-        <h3>Calendario Inteligente</h3>
-        <p>Encontrá matches de disponibilidad en tiempo real. ¡Nunca fue tan fácil coordinar!</p>
-      </div>
-    </div>
-
-    <div class="pq-item">
-      <img src="resources/chatbot.png" alt="Inteligencia social" class="pq-icon">
-      <div class="pq-text">
-        <h3>Chatbot Organizador</h3>
-        <p>El bot del grupo propone, organiza, notifica y hasta divide gastos. Un verdadero asistente personal para tu grupo.</p>
-      </div>
-    </div>
-
-    <div class="pq-item">
-      <img src="resources/adaptativo.png" alt="Plan perfecto" class="pq-icon">
-      <div class="pq-text">
-        <h3>Planificación Adaptativa</h3>
-        <p>Hango aprende de las salidas anteriores para mejorar cada nueva experiencia y se adapta a contingencias.</p>
-      </div>
-    </div>
-
-    <div class="pq-item">
-      <img src="resources/bitacora.png" alt="Chat interminable" class="pq-icon">
-      <div class="pq-text">
-        <h3>Bitácora de Momentos</h3>
-        <p>Guardá recuerdos de cada salida: fotos, comentarios y calificaciones para revivir lo mejor de tu grupo.</p>
-      </div>
-    </div>
-
-  </div>
-</section>-->
-
 <footer>
   <div class="footer-container">
     <div class="footer-brand">
@@ -244,6 +190,7 @@
         .then(function () {
           alert('🎉 ¡Gracias por tu interés! Te enviamos un correo con más info.');
           document.getElementById('contact-form').reset();
+          closeModal();
         }, function (error) {
           console.error('😞 Error al enviar', error);
           alert('Oops... algo salió mal. Probá más tarde.');
